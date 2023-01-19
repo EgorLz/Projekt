@@ -25,4 +25,11 @@ while True:
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            if event.button == 1:
+                start_point = event.pos
+            if event.button == 3:
+                print(start_point[0]. start_point[1], event.pos[0], event.pos[1])
+                pygame.draw.rect(screen, "white", (start_point[0]. start_point[1], event.pos[0], event.pos[1]))
+                pygame.display.update()
     pygame.display.flip()
